@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Shield, Key, Plus, Trash2, Edit2, X, Check, AlertCircle, Loader2 } from 'lucide-react';
-import { supabaseClient } from '@/lib/supabaseClient'; // Changed from 'supabase' to 'supabaseClient'
+import { supabaseClient } from '@/lib/supabaseClient'; 
 
 const API_BASE = '/api';
 
@@ -66,7 +66,7 @@ const RBACDashboard = () => {
       const data = await res.json();
       setTenants(data);
       
-      // Auto-select first tenant
+
       if (data.length > 0) {
         setTenantId(data[0].id);
       }
